@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+    
+</head>
+<body>
+    <div class="signup-container">
+
+
+        <div class="left_side">
+            <img class="image" src="{{ url_for('static', filename='Pics/logo.png') }}" alt="">
+            <h1>SignUp Here</h1>
+        </div>
+        
+        <div class="right-side">
+            <form id="signup-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+    
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <p id="message" class="message"></p>
+                <button style="background-color: #243b55; margin-left: 10px; transition: 0.5s; border: none; margin-bottom: 10px;" 
+                onmouseover="this.style.backgroundColor='rgb(240, 208, 0)', this.style.color = '#243b55', this.style.border = 'solid'" 
+                onmouseout="this.style.backgroundColor='#243b55', this.style.color = 'white', this.style.border = 'none'"
+                 type="submit" class="submit">Signup</button>
+                <div class="LoginLink">
+                    <a href="{{ url_for('serve_frontend') }}" 
+                    onmouseover="this.style.color='rgb(240, 208, 0)', this.style.border = 'none'" 
+                    onmouseout="this.style.color='#243b55', this.style.border = 'none'">Click here to Login</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+ 
+
+
+    <script type="module" src="{{ url_for('static', filename='js/signup.js') }}"></script>
+
+
+
+</body>
+</html>

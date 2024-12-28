@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    
+  <div class="body">
+    <h2>File Sharing Application</h2>
+    <div class="displayBlock">
+      <div class="element">
+        <img class="image" src="{{ url_for('static', filename='Pics/upload.png') }}" alt=""/>
+        <input type="file" id="fileInput" multiple/>
+        <div id="status"></div>        
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+        <button class="upload">Upload</button>
+      </div>
+      <div class="element">
+        <img class="image" src="{{ url_for('static', filename='Pics/download.png') }}" alt="">
+        <button class="upload download">Download</button>
+      </div>
+      <div class="element">
+        <img class="image" src="{{ url_for('static', filename='Pics/view.png') }}"" alt="">
+        <button class="upload view">View</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="displayBox">
+    <div class="displayBoxTopDiv">
+      <h3>Available Files</h3>
+      <button class="close">X</button>
+    </div>
+    <div class="listGrid">
+    </div>
+    </div> 
+  </div>
+
+
+
+
+    
+  <script type="module" src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    
+  <div class="body">
+    <h2>File Sharing Application</h2>
+    <button class="seeAddress" style="background-color: #243b55; right: 510px;  position: absolute;bottom: 30px; width: 260px;">See IP Addresses</button>
+    <div class="displayBlock">
+      <div class="element">
+        <!-- <img class="image" src="{{ url_for('static', filename='Pics/upload.png') }}" alt=""/> -->
+        <div id="dragDropArea" class="drag-drop-area">
+          <p>Drag & Drop files here or click to select</p>
+          <input type="file" id="fileInput" multiple hidden/>
+        </div>
+        <div id="status"></div>        
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+        <button class="upload">Upload</button>
+      </div>
+      <div class="element">
+        <img class="image" src="{{ url_for('static', filename='Pics/download.png') }}" alt=""/>
+        <button class="upload download">Download</button>
+      </div>
+      <div class="element">
+        <img class="image" src="{{ url_for('static', filename='Pics/view.png') }}" alt=""/>
+        <button class="upload view">View</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="displayBox">
+    <div class="displayBoxTopDiv">
+      <h3>Available Files</h3>
+      <button class="close">X</button>
+    </div>
+    <div class="listGrid">
+    </div>
+  </div>
+
+
+  <div class="displayBox1">
+    <div class="displayBoxTopDiv">
+      <h3>Available Devices Ip Address</h3>
+      <button class="close1">X</button>
+    </div>
+    <div class="listOfIPs" style="display: flex; flex-direction: column; align-items: center;">
+      <div class="loading">Loading...</div>
+      <p class="ip"></p>
+    </div>
+  </div>
+
+  <script type="module" src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>

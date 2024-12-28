@@ -1,0 +1,432 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f9;
+}
+h2 {
+  color: #333;
+}
+
+.upload, .seeAddress {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload:hover .seeAddress:hover {
+  background-color: #243b55;
+  border-radius: 4px;
+  border-color: rgb(240, 208, 0);
+  border-width: 0.657px;
+  border-style: solid;
+}
+#status {
+  margin-top: 20px;
+  color: green;
+}
+
+.body {
+  background-color: #243b55;
+  padding: 30px 10px;
+  border-radius: 4px;
+  padding-left: 100px;
+  text-align: center;
+}
+
+h2 {
+  font-family: Hind Mysuru;
+  color: white;
+  margin-left: -90px;
+}
+
+.image {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.displayBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: solid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+  border-width: 0.657px;
+  border-color: rgb(240, 208, 0);
+}
+
+.upload {
+  width: 200px;
+  border-radius: 4px;
+  border-style: none;
+  font-family: Hind Mysuru;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: rgb(240, 208, 0);
+  color: white;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#fileInput {
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+/*=================== Display Box CSS ================*/
+
+.displayBox, .displayBox1 {
+  position: absolute;
+  width: 700px;
+  background-color: white;
+  top: 100px;
+  left: 300px;
+  height: 350px;
+  text-align: center;
+  font-family: Hind Mysuru;
+  color: #243b55;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  display: none;
+  padding: 5px;
+  overflow: scroll;
+
+  /* background-color: yellow; */
+}
+
+.close, .close1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: none;
+  padding: 5px 15px;
+  border-top-right-radius: 6px;
+  cursor: pointer;
+  height: 100%;
+  background-color: #ababab;
+}
+
+.close:hover, .close1:hover {
+  background-color: red;
+}
+
+/*------------------ Display Available Files ---------------------*/
+
+.listGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.listGridDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
+  border-radius: 6px;
+}
+
+.listGridDivLower,
+.listGridDivUpper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+
+
+.listGridDivLower {
+  display: flex;
+  align-items: center;
+}
+
+.listGridDivLowerRight,
+.listGridDivLowerLeft {
+  padding: 0px 5px;
+}
+
+.listGridDivLowerLeft {
+  margin: 5px;
+  padding: 0;
+}
+
+.listGridDivLowerRight {
+  margin-left: 5px;
+}
+
+.downloadButtonImage {
+  width: 30px;
+  height: 30px;
+}
+
+.fileDownloadButton {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-style: solid;
+  border-color: rgb(240, 208, 0);
+  border-width: 0.65px;
+  margin-bottom: 10px;
+}
+
+.fileDownloadButton:hover {
+  background-color: #243b55;
+}
+
+.displayBoxTopDiv {
+  position: fixed;
+  background-color: #919191;
+  color: white;
+  height: 50px;
+  left: 300px;
+  right: 270px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  top: 50px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.name {
+  word-wrap: break-word;
+  padding: 0;
+  margin: 0;
+  width: 230px;
+  text-align: left;
+}
+
+
+#progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 20px;
+  margin-top: 10px;
+  display: none; /* Hidden initially */
+}
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+/*---------------------- For Mobile Screen ------------------------*/
+
+@media (max-width: 480px) {
+
+  body{
+    margin-top: -20px;
+  }
+
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+
+  #status {
+    margin-top: 20px;
+    color: green;
+    text-wrap: break-word;
+  }
+  
+  .body {
+    background-color: #243b55;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: -30px;
+    margin-right: -20px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: white;
+    margin-left: 0px;
+  }
+  
+  .image {
+    width: 70px;
+  }
+  
+  .displayBlock {
+    grid-template-columns: 1fr;
+  }
+  
+  .element {
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 35px;
+  }
+  
+  .upload {
+    width: 200px;
+    border-radius: 4px;
+    border-style: none;
+    font-family: Hind Mysuru;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgb(240, 208, 0);
+    color: white;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  #fileInput {
+    margin-left: 70px;
+    margin-top: 10px;
+  }
+  
+  /*=================== Display Box CSS ================*/
+  
+  .displayBox, .displayBox1 {
+    position: absolute;
+    width: 325px;
+    background-color: white;
+    top: 150px;
+    left: 30px;
+    height: 450px;
+    text-align: center;
+    font-family: Hind Mysuru;
+    color: #243b55;
+  
+  
+    /* background-color: yellow; */
+  }
+  
+  .close, .close1 {
+    position: absolute;
+    top: 50px;
+    right: -65px;
+    border: none;
+    background-color: none;
+    padding: 5px 15px;
+    border-top-right-radius: 6px;
+    cursor: pointer;
+    height: 100%;
+    background-color: #ababab;
+  }
+
+  h3{
+    text-align: center;
+    background-color: #919191;
+    position: fixed;
+    left: 30px;
+    top: 82px;
+    height: 34px;
+    width: 300px;
+    padding-top: 15px;
+
+  }
+  
+
+  
+  /*------------------ Display Available Files ---------------------*/
+  
+  .listGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .seeAddress {
+    position: fixed;
+    bottom: 100px;
+    left: 60px;
+    padding: 10px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .ip{
+    background-color: rgb(240, 208, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #243b55;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+}
+
+
+/* Drag and Drop */
+
+
+.drag-drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.drag-drop-area.drag-over {
+  border-color: #007BFF;
+}
+
+
+.ip{
+  background-color: rgb(240, 208, 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 500px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: #243b55;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.loading{
+  text-align: center;
+  margin-top: 20%;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}

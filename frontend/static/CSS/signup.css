@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+label {
+  color: #243b55;
+  font-size: 15px;
+}
+
+input{
+  width: 250px;
+}
+
+.signup-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  border-radius: 4px;
+  border-color: #243b55;
+  border-width: 0.657px;
+  border-style: solid;
+}
+.signup-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+.signup-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.signup-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.signup-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signup-container button:hover {
+  background-color: #0056b3;
+}
+.message {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+h1{
+  text-align: center;
+  color: #243b55;
+}
+
+.left_side{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-side{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 10px;
+  border-left-style: solid;
+  border-left-color: #243b55;
+  border-left-width: 2px;
+}
+
+.LoginLink{
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.LoginLink:hover{
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(240, 208, 0);
+}
+
+.input[type="submit"] {
+  width: 200px;
+  border-radius: 4px;
+  border-style: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.image{
+  width: 100px;
+  border-style: solid;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-color: rgb(240, 208, 0);
+  border-bottom: none;
+}
+
+/*------------------ Responsive SignUp-----------------*/
+
+@media (max-width: 480px) {
+  .signup-container {
+    grid-template-columns: 1fr;
+    width: 300px;
+  }
+ 
+  .right-side{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 15px;
+    border: none;
+    border-top-style: solid;
+    border-top-color: rgb(240, 208, 0);
+    border-top-width: 2px;
+    padding-top: 20px;
+  }
+  
+  
+}

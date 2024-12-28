@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask API Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+  
+</head>
+<body>
+
+    <div class="main-grid">
+
+        <div class="left-side">
+            <img class="image" src="{{ url_for('static', filename='Pics/logo.png') }}" alt="">
+        </div>
+
+        <div class="right-side">
+            <form id="login-form">
+                <h3>Login Here</h3>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <p id="login-response"></p>
+                <button type="submit">Login</button>
+                <div style="text-align: center;">
+                    <a href="{{ url_for('signup_Page') }}" style="color: rgb(240, 208, 0);"
+                    onmouseover="this.style.color='white', this.style.border = 'none'" 
+                    onmouseout="this.style.color=' rgb(240, 208, 0)', this.style.border = 'none'"
+                    >Click here to signup</a>
+                </div>
+            </form>    
+        </div>
+        
+        
+    </div>
+
+    
+
+
+
+    <script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+</html>
